@@ -17,9 +17,9 @@ jobs:
           at: ~/
       - run: cat ~/output.txt
 workflows:
-  my_work_flow:
+  my_workflow:
     jobs:
       - save_hello_output_world
       - print_output_file:
-        requires:
-        - save_hello_output_world
+          requires:
+          - save_hello_output_world
